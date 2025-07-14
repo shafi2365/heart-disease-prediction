@@ -3,4 +3,4 @@ numpy
 scikit-learn
 pandas
 mysql-connector-python
-
+gunicorn
