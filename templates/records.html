@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>All Predictions</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        table { border-collapse: collapse; width: 100%; }
+        th, td { border: 1px solid #dddddd; text-align: left; padding: 8px; }
+        th { background-color: #f2f2f2; }
+        tr:nth-child(even) { background-color: #f9f9f9; }
+        h2 { margin-bottom: 20px; }
+        a { text-decoration: none; color: blue; }
+    </style>
+</head>
+<body>
+    <h2>Stored Predictions</h2>
+    <a href="/">← Back to Home</a>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Parentage</th>
+            <th>Address</th>
+            <th>Age</th>
+            <th>Sex</th>
+            <th>CP</th>
+            <th>Trestbps</th>
+            <th>Chol</th>
+            <th>FBS</th>
+            <th>Restecg</th>
+            <th>Thalach</th>
+            <th>Exang</th>
+            <th>Oldpeak</th>
+            <th>Slope</th>
+            <th>CA</th>
+            <th>Thal</th>
+            <th>Result</th>
+        </tr>
+        {% for row in records %}
+        <tr>
+            <td>{{ row[0] }}</td>
+            <td>{{ row[1] }}</td>
+            <td>{{ row[2] }}</td>
+            <td>{{ row[3] }}</td>
+            <td>{{ row[4] }}</td>
+            <td>{{ row[5] }}</td>
+            <td>{{ row[6] }}</td>
+            <td>{{ row[7] }}</td>
+            <td>{{ row[8] }}</td>
+            <td>{{ row[9] }}</td>
+            <td>{{ row[10] }}</td>
+            <td>{{ row[11] }}</td>
+            <td>{{ row[12] }}</td>
+            <td>{{ row[13] }}</td>
+            <td>{{ row[14] }}</td>
+            <td>{{ row[15] }}</td>
+            <td>{{ row[16] }}</td>
+            <td>{{ row[17] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

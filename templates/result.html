@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prediction Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #d7f8f8, #b2ebf2);
+            margin: 0;
+            padding: 40px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #00695c;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .patient-info {
+            background-color: #e3f2fd;
+            padding: 20px;
+            border-left: 6px solid #2196f3;
+            font-size: 18px;
+            margin-bottom: 25px;
+            border-radius: 8px;
+        }
+
+        .result-box {
+            padding: 25px;
+            background-color: #ffecb3;
+            border: 1px solid #ffc107;
+            font-size: 24px;
+            font-weight: bold;
+            color: #d84315;
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        .back-link {
+            display: block;
+            text-align: center;
+            margin-top: 30px;
+            font-size: 16px;
+            color: #00695c;
+            text-decoration: none;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Heart Disease Prediction Result</h1>
+
+    <div class="container">
+        <div class="patient-info">
+            <strong>Name:</strong> {{ name }}<br>
+            <strong>Father Name:</strong> {{ parentage }}<br>
+            <strong>Residence:</strong> {{ address }}<br>
+            <strong>Age:</strong> {{ age }}
+        </div>
+
+        <div class="result-box">
+            {{ prediction_text }}
+        </div>
+
+        <a class="back-link" href="/">← Predict Again</a>
+    </div>
+
+</body>
+</html>
